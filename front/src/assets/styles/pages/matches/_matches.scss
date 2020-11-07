@@ -1,0 +1,308 @@
+.matches-page {
+    color: white;
+
+    .filters {
+        margin-bottom: 20px;
+        &__btn {
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            background-image: linear-gradient(1deg, rgba(150, 112, 167, 0.31) 0%, rgba(255, 0, 128, 0.35) 100%);
+            color: $white-text!important;
+            padding: 10px 0;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            font-size: 14px;
+            font-weight: 300;
+            text-transform: uppercase;
+            box-shadow: 3px 11px 8px rgba(0, 0, 0, 0.5);
+
+            &:first-of-type {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &:nth-of-type(2) {
+                border-radius: 0;
+            }
+            &:last-of-type {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            &.active {
+                background-color: #ffffff59;
+                pointer-events: none;
+            }
+            &:focus {
+                box-shadow: 3px 11px 8px rgba(0, 0, 0, 0.5);
+            }
+
+        }
+        .filter-popup {
+            position: absolute;
+            box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.3);
+            background-color: #0000004f;
+            z-index: 1;
+            top: 43px;
+            left: 40px;
+            right: 40px;
+            backdrop-filter: blur(18px);
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+            padding: 45px 0;
+            &__list {
+                padding: 0 20px;
+                position: relative;
+                ul {
+                    margin: 0;
+                    max-height: calc(100vh - 340px);
+                    overflow-x: auto;
+                }
+            }
+            &__item {
+                a {
+                    color: white;
+                    position: relative;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-decoration: none;
+                    padding: 8px 10px;
+                    &.active {
+                        font-size: 20px;
+                        font-weight: 700;
+                        &::before {
+                            left: 0;
+                            content: "";
+                            position: absolute;
+                            height: 100%;
+                            width: 3px;
+                            top: 0;
+                            box-shadow: 0 3px 6px rgba(217, 0, 174, 0.5);
+                            background: $light-neon-pink;
+                        }
+                    }
+                }
+            }
+            &__close-icon {
+                position: absolute;
+                right: -20px;
+                top: -30px;
+            }
+        }
+    }
+    .matches-list {
+        padding: 0 20px 50px;
+        max-height: calc(100vh - 250px);
+        overflow-y: auto;
+        margin: 0px 5px;
+        &__container {
+            background-image: url("../src/assets/img/matches-bg.png");
+            background-size: cover;
+            padding: 10px 10px;
+            margin: 0px 0 15px;
+            overflow: hidden;
+            border-radius: 29px;
+            box-shadow: 3px 11px 8px rgba(0, 0, 0, 0.35);
+            table {
+                color: white;
+                thead {
+                    th {
+                        font-size: 10px;
+                        font-weight: 400;
+                        border: none;
+                        &:first-of-type {
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        &:not(:first-of-type) {
+                            width: 64px;
+                            text-align: center;
+                        }
+                    }
+                }
+                tbody {
+                    .match-row {
+                        td {
+                            border: none;
+                            font-size: 12px;
+                            vertical-align: middle;
+                            &:first-of-type {
+                                width: 75px;
+                                text-align: right;
+                            }
+                            &:nth-of-type(3) {
+                                width: 75px;
+                            }
+                        }
+                        &__status {
+                            color: #b4b4b4;
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 14px;
+                            text-transform: uppercase;
+                        }
+                        &__secondary-status {
+                            color: #cfffc9;
+                            font-family: "Titillium Web";
+                            font-size: 10px;
+                            font-weight: 400;
+                            line-height: 14px;
+                        }
+                        &__current-minute {
+                            color: $neon-green;
+                            font-size: 10px;
+                            font-weight: 600;
+                        }
+                        &__start-in-minute {
+                            color: $yellow-text;
+                            font-size: 10px;
+                            font-weight: 600;
+                        }
+                        &__start {
+                            font-size: 10px;
+                            font-weight: 300;
+                            line-height: 14px;
+                        }
+                        &__teams {
+                            div {
+                                font-size: 12px;
+                                font-weight: 400;
+                                span {
+                                    opacity: 0.5;
+                                }
+                            }
+                        }
+
+                        .match-bet {
+                            padding: 5px;
+                            &__box {
+                                box-shadow: 0 0 6px #d9007ba6;
+                                border: 1px solid $light-neon-pink;
+                                display: inline-block;
+                                color: white;
+                                text-decoration: none;
+                                width: 100%;
+                                padding: 7px 5px;
+                                text-align: center;
+                                color: #c2c2c2;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 16px;
+                                .percentage {
+                                    font-size: 12px;
+                                }
+                                &--home {
+                                    border-radius: 10px 0 0 10px;
+                                }
+                                &--away {
+                                    border-radius: 0px 10px 10px 0px;
+                                }
+                                &.disabled {
+                                    pointer-events: none;
+                                    border: 1px solid #c8c8c8;
+                                    opacity: 0.5;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__show-more {
+            a {
+                display: inline-block;
+                transition: all 0.3s;
+                &.show-all {
+                    transform: rotateZ(180deg);
+                }
+            }
+        }
+    }
+}
+@include breakpoint(576px, "max") {
+    .matches-page {
+        .matches-list {
+            padding: 0 0 50px;
+            max-height: initial;
+            margin: 0px;
+            &__container {
+                overflow: auto;
+                table {
+                    thead {
+                        th {
+                            font-size: 10px;
+                            &:first-of-type {
+                                font-size: 14px;
+                            }
+                            &:not(:first-of-type) {
+                                width: 64px;
+                            }
+                        }
+                    }
+                    tbody {
+                        .match-row {
+                            td {
+                                &:first-of-type {
+                                    width: 75px;
+                                    text-align: right;
+                                    padding: 0 2px;
+                                }
+                                &:nth-of-type(3) {
+                                    width: 75px;
+                                    padding: 0 5px;
+                                }
+                               
+                            }
+                            &__status {
+                                font-size: 8px;
+                            }
+                            &__secondary-status {
+                                font-size: 8px;
+                            }
+                            &__current-minute {
+                                font-size: 10px;
+                            }
+                            &__start-in-minute {
+                                font-size: 10px;
+                            }
+                            &__start {
+                                font-size: 8px;
+                            }
+                            .match-bet {
+                                padding: 5px 3px;
+                                &__box{
+                                    font-size: 12px;
+                                    .percentage {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .filters {
+            &__btn {
+                padding: 10px 0;
+                font-size: 14px;
+            }
+            .filter-popup {
+                left: 15px;
+                right: 15px;
+                &__list {
+                    padding: 0 35px;
+                }
+                &__item {
+                    a {
+                        font-size: 14px;
+                        padding: 8px 10px;
+                    }
+                }
+                &__close-icon {
+                    right: 12px;
+                    top: -34px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.tabs {
+  display: flex;
+  width: 121px;
+  height: 25px;
+  justify-content: space-between;
+  align-items: baseline;
+  z-index: 1;
+  .block{
+    width: 8px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer !important;
+
+    &:hover {
+      .medium, .small {
+        transform: scaleX(5);
+      }
+    }
+  }
+  .big, .medium, .small{
+    width: 1px;
+    background: #B7B7B7;
+    height: 100%;
+    transition: transform .2s ease, height .8s ease;
+  }
+  .big{
+    width: 1px;
+    height: 25px;
+    background: #373737;
+    cursor: default;
+  }
+  .medium{
+    height: 18px;
+  }
+  .small{
+    height: 10px;
+  }
+}

@@ -1,0 +1,143 @@
+#index {
+  justify-content: space-between;
+  max-width: 10000px;
+
+  .header-block{
+    max-width: 72.92vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .text-slider {
+    width: 13.54vw;
+    height: 14.81vh;
+    margin-right: 1.56vw;
+  }
+
+  .pics-slider {
+    width: 43.73vw;
+    height: 14.81vh;
+
+    .custom-slider__slide {
+      width: 13.02vw;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__center {
+      left: 13.85vw;
+    }
+
+    &__right {
+      left: 27.71vw;
+    }
+  }
+
+  .page-header{
+    margin-bottom: 4.44vh;
+    .title{
+      margin-bottom: 2.59vh;
+    }
+  }
+  .header__mobile{
+    display: none;
+  }
+  .routes{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &-box{
+      margin: 0.74vh 5.74vh 0.74vh 0;
+      display: flex;
+      .route{
+        font-family: 'Nunito';
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+        color: #24200C;
+        cursor: none;
+      }
+    }
+    &-box:last-child{
+      margin-right: 0;
+    }
+  }
+
+  a.blob-wrapper{
+    margin-top: 3.70vh;
+    cursor: none;
+  }
+
+  .bottom-block{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 4.44vh;
+
+    .right{
+      display: flex;
+      justify-content: space-between;
+      .slider{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 54.69vw;
+        img{
+          //width: 250px;
+          height: 14.81vh;
+        }
+        .swiper-slide-textblock{
+          min-height: 100%;
+          height: 14.81vh;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .swiper-slide-header{
+            font-family: 'HeuristicaRegular';
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+            color: #24200C;
+          }
+          .swiper-slide-text-wrapper{
+            margin-top: auto;
+            flex: 1 1 12.04vh;
+            max-height: 100%;
+            font-family: 'Nunito';
+            font-size: 1rem;
+            line-height: 1.375rem;
+            color: #24200C;
+            display: flex;
+            align-items: flex-end;
+          }
+          .swiper-slide-text{
+            margin-top: auto;
+          }
+        }
+      }
+      .arrow-block-next{
+        width: 20px;
+        display: flex;
+        align-items: center;
+        margin-left: 1.65vw;
+        .arrow{
+          // cursor: pointer;
+        }
+      }
+      .arrow-block-prev{
+        width: 20px;
+        display: flex;
+        align-items: center;
+        margin-right: 1.65vw;
+        .arrow{
+          // cursor: pointer;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

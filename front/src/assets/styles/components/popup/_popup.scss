@@ -1,0 +1,218 @@
+#bet-modal {
+    .modal-content {
+        border-radius: 20px;
+        border: 2px solid $main-color;
+        background-color: #000000;
+        color: white;
+    }
+    .modal-header {
+        border-color: #d900ae80;
+        padding: 12px 20px;
+    }
+
+    .modal-title {
+        font-size: 16px;
+        font-weight: 600;
+        img {
+            width: 25px;
+            margin-right: 5px;
+        }
+    }
+    .modal-body {
+        padding: 20px 50px;
+        .about-game {
+            .left-content {
+                display: flex;
+                align-items: center;
+                .time {
+                    font-size: 8px;
+                    font-weight: 400;
+                    margin-right: 15px;
+                }
+                .teams {
+                    ul {
+                        margin: 0;
+                        li {
+                            font-size: 12px;
+                            font-weight: 400;
+                            &.selected-team {
+                                color: $neon-green;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-content {
+                ul {
+                    margin: 0;
+                    text-align: center;
+                    li {
+                        font-size: 12px;
+                        font-weight: 600;
+                        line-height: 10px;
+                        display: inline-block;
+                        margin: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+    .modal-footer {
+        display: initial;
+        border-color: rgba(217, 0, 174, 0.5);
+        .btn {
+            border-radius: 10px !important;
+        }
+        .max-button {
+            border: 1px solid $yellow-text !important;
+        }
+        ul {
+            li {
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 17px;
+                display: inline-block;
+                &.profit {
+                    margin-right: 20px;
+                    span {
+                        color: $neon-green;
+                    }
+                }
+                &.max {
+                    span {
+                        color: $yellow-text;
+                    }
+                }
+            }
+        }
+        .close-button {
+            border: 1px solid $red-text !important;
+            padding: 20px 40px !important;
+            &:hover {
+                box-shadow: 0 0 6px rgba(254, 0, 0, 0.5) !important;
+            }
+        }
+        .place-bet-button {
+            border: 1px solid $neon-green !important;
+            padding: 20px 40px !important;
+            color: white !important;
+            &:hover {
+                box-shadow: 0 0 6px #1aff0080 !important;
+            }
+        }
+        .input-button {
+            border-radius: 10px;
+            border: 1px solid #f9f9f9;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .input-text {
+                text-align: center;
+                color: $yellow-text;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 17px;
+            }
+            input {
+                background: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                width: 100px;
+                color: $yellow-text;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 17px;
+            }
+            a {
+                color: $yellow-text;
+                font-size: 25px;
+                font-weight: 600;
+                position: absolute;
+                display: inline-block;
+                height: 100%;
+                &:hover {
+                    text-decoration: none;
+                }
+                &.minus-btn {
+                    left: 15px;
+                }
+                &.plus-btn {
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+@include breakpoint(576px, "max") {
+    #bet-modal {
+        .modal-header {
+            padding: 10px 15px;
+        }
+        .modal-body {
+            padding: 10px 15px;
+            .about-game {
+                .left-content {
+                    .time {
+                        margin-right: 10px;
+                    }
+                    .teams {
+                        ul {
+                            li {
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+                .right-content {
+                    ul {
+                        li {
+                            font-size: 11px;
+                            margin: 0 6px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            ul {
+                li {
+                    font-size: 10px;
+                    &.profit {
+                        margin-right: 20px;
+                    }
+                }
+            }
+            .btn {
+                font-size: 14px;
+            }
+            .close-button {
+                padding: 15px 5px !important;
+            }
+            .place-bet-button {
+                padding: 15px 5px !important;
+            }
+            .input-button {
+                border-radius: 10px;
+                .input-text {
+                    font-size: 16px;
+                }
+                input {
+                    width: 60px;
+                }
+                a {
+                    font-size: 25px;
+                    &.minus-btn {
+                        left: 15px;
+                    }
+                    &.plus-btn {
+                        right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

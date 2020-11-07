@@ -1,0 +1,99 @@
+#partners {
+  .slider-control{
+    display: flex;
+    justify-content: center;
+    margin-top: 4.17vh;
+    .swiper-pagination{
+      position: relative;
+      .swiper-pagination-bullet{
+        margin: 0 9px;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      .swiper-pagination-bullet.swiper-pagination-bullet-active{
+        background-color: black !important;
+        height: 6px !important;
+        width: 6px !important;
+      }
+    }
+    .prev{
+      margin-right: 0.52vw;
+      transform: rotate(270deg);
+    }
+    .next{
+      margin-left: 0.52vw;
+      transform: rotate(270deg);
+    }
+
+  }
+  .partners-wrapper{
+    height: 100%;
+    margin: 0 auto;
+    max-width: 72vw;
+    display: flex;
+    flex-direction: column;
+
+    .swiper-container {
+      width: 100%;
+      position: relative;
+      margin-top: 5vh;
+    }
+  }
+  .swiper-container{
+    margin: 0;
+  }
+  .partners__bottom{
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    .slider-control{
+      margin: 0;
+    }
+  }
+
+
+  .partners{
+    width: 64vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    &-become {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 18.52vh;
+      z-index: 2;
+    }
+
+    &-container{
+      width: 16vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span{
+        cursor: pointer;
+        width: 50%;
+        font-family: 'Nunito';
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+        letter-spacing: 0.02em;
+        text-decoration-line: underline;
+        color: #000000;
+      }
+      img{
+        width: 16vw;
+        object-fit: cover;
+      }
+    }
+
+  }
+  .partners__mobile{
+    display: none;
+  }
+}

@@ -1,0 +1,127 @@
+.catalogPage {
+    .tableCol {
+        position: relative;
+    }
+    .totalTable {
+        // position: sticky;
+        // top: 20px;
+        position: fixed;
+        top: 26%;
+        background: white;
+        box-shadow: $shadow;
+        padding: 5px;
+        th,
+        td {
+            text-align: center;
+            width: 40px;
+            font-size: 10px;
+            padding: 5px;
+        }
+    }
+    .catalogCard {
+        box-shadow: $shadow;
+        padding: 12px 12px 33px;
+        height: 100%;
+        position: relative;
+
+        .imageContainer {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                max-width: 100%;
+                max-height: 200px;
+            }
+        }
+        .cardName {
+            text-align: center;
+            color: $color;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .cardBody {
+            margin-top: 10px;
+            .cardTitle {
+                font-size: 14px;
+            }
+            .cardDescr {
+                font-size: 13px;
+                color: #747474;
+                line-height: 18px;
+                margin-bottom: 5px;
+            }
+            .tableArea {
+                tbody {
+                    tr {
+                        height: 33px;
+                    }
+                }
+                th,
+                td {
+                    font-size: 10px;
+                    padding: 5px;
+                    text-align: center;
+                    i {
+                        font-size: 10px;
+                    }
+                    input {
+                        padding: 0;
+                        width: 30px;
+                        height: 25px;
+                        font-size: 10px;
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .price {
+                margin-bottom: 10px;
+                span {
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: $color;
+                }
+            }
+        }
+        .btnRow {
+            position: absolute;
+            bottom: 11px;
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+.productDetail {
+    .productContent {
+        padding: 15px;
+        box-shadow: $shadow;
+    }
+    .productName {
+        h5 {
+            text-align: center;
+            color: $color;
+            text-transform: uppercase;
+        }
+    }
+    .productPrice {
+        margin-bottom: 10px;
+        .price {
+            color: $color;
+        }
+    }
+    .productDescr {
+        p {
+            color: #747474;
+        }
+    }
+    .productTable {
+        table {
+            th,
+            td {
+                text-align: center;
+                padding: 5px;
+            }
+        }
+    }
+}

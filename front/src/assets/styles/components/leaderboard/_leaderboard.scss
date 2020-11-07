@@ -1,0 +1,205 @@
+#leaderboard-modal {
+    .modal-content {
+        background: transparent;
+        border: none;
+    }
+    .modal-header {
+        display: initial;
+        text-align: center;
+        border: none;
+        .close-area {
+            position: absolute;
+            right: -20px;
+            top: -5px;
+        }
+    }
+    .modal-footer {
+        border: none;
+    }
+    .modal-body {
+        color: white;
+        .timer-area {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 13px 45px;
+            & > span {
+                font-size: 10px;
+                font-weight: 300;
+                line-height: 10px;
+            }
+            ul {
+                margin: 0;
+                li {
+                    font-size: 15px;
+                    font-weight: 200;
+                    line-height: 15px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    span {
+                        font-weight: 600;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .leaderboard-area {
+            .content-heading {
+                margin: 20px 0;
+                h2 {
+                    text-align: center;
+                    font-size: 19px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+            }
+            .list-area {
+                .col-2,
+                .col-6 {
+                    display: flex;
+                    align-items: center;
+                }
+                .top-three-user {
+                    padding: 18px 15px;
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-radius: 10px;
+                }
+                .other-users {
+                    padding: 18px 15px;
+                }
+                .top-users {
+                    ul {
+                        margin: 0;
+                        li {
+                            padding: 3px 0;
+                        }
+                    }
+                    &__no {
+                        text-align: right;
+                        font-size: 21px;
+                        font-weight: 600;
+                        width: 100%;
+                    }
+                    &__about {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 21px;
+                            height: 21px;
+                            border-radius: 100%;
+                            object-fit: fill;
+                            margin-right: 10px;
+                        }
+                        span {
+                            font-size: 15px;
+                            font-weight: 600;
+                        }
+                    }
+                    &__amount {
+                        color: $yellow-text;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    &__roi {
+                        font-size: 10px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .info-area {
+            text-align: center;
+            a {
+                text-decoration: none;
+                font-size: 10px;
+                font-weight: 400;
+                color: white;
+            }
+        }
+    }
+}
+@include breakpoint(576px, "max") {
+    #leaderboard-modal {
+        .modal-header {
+            .close-area {
+                right: 5px;
+                top: 0px;
+            }
+            svg {
+                width: 125px;
+                height: 125px;
+            }
+        }
+        .modal-body {
+            padding-bottom: 70px;
+            .timer-area {
+                padding: 5px 20px;
+                & > span {
+                    font-size: 8px;
+                }
+                ul {
+                    li {
+                        font-size: 12px;
+                        margin-right: 10px;
+                        span {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+            .leaderboard-area {
+                .content-heading {
+                    margin: 15px 0;
+                    h2 {
+                        font-size: 15px;
+                    }
+                }
+                .list-area {
+                    .col-2 {
+                        padding: 0;
+                    }
+                    .top-three-user {
+                        padding: 18px 15px;
+                    }
+                    .other-users {
+                        padding: 18px 15px;
+                    }
+                    .top-users {
+                        ul {
+                            li {
+                                padding: 3px 0;
+                            }
+                        }
+                        &__no {
+                            font-size: 16px;
+                        }
+                        &__about {
+                            img {
+                                width: 16px;
+                                height: 16px;
+                                margin-right: 5px;
+                            }
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                        &__amount {
+                            font-size: 14px;
+                        }
+                        &__roi {
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

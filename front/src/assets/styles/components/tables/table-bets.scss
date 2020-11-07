@@ -1,0 +1,343 @@
+.bets {
+  &__table {
+    table {
+      border-spacing: 0 4px;
+      border-collapse: separate;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    &__head {
+      text-align: center;
+      background: linear-gradient(rgba(255, 0, 128, 0.45), rgba(150, 112, 167, 0.4));
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+
+      th {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 200;
+        padding: 16px 0;
+
+        &:first-child {
+          max-width: 120px;
+          box-sizing: border-box;
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 10px;
+          padding-left: 110px;
+          text-align: left;
+          position: relative;
+          cursor: pointer;
+          text-align: center;
+
+          .date {
+            position: relative;
+
+            img {
+              height: 20px;
+              display: block;
+              position: absolute;
+              top: 12px;
+              left: -22px;
+              opacity: 0.7;
+            }
+
+            span {
+              display: block;
+              font-weight: 800;
+
+              &:last-of-type {
+                font-size: 18px;
+              }
+            }
+          }
+
+
+
+          &:focus {
+            outline: none;
+            background: #ffffff66;
+          }
+        }
+
+        &:last-child {
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 10px;
+          padding-right: 10px;
+        }
+      }
+
+      .time {
+        background-color: rgba(255, 255, 255, 0.1);
+        font-weight: 600;
+      }
+    }
+
+    &__body {
+      tr {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 200;
+        text-align: center;
+        border-radius: 10px;
+        background-image: url("assets/img/table-bg@2x.png");
+        background-size: cover;
+        margin-bottom: 4px;
+
+        &.disabled td {
+          opacity: 0.5;
+        }
+
+        td {
+          padding: 7px 0;
+
+          &:first-child {
+            text-align: left;
+           
+          }
+
+          &:last-child {
+            padding-right: 0px;
+          }
+
+          &.bet-profit {
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+
+          &.bet-loss {
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+
+        &.won {
+          td:first-of-type {
+            background-image: url(assets/img/bet-profit.png);
+
+          }
+
+        }
+
+        &.lost {
+          td:first-of-type {
+            background-image: url(assets/img/bet-loss.png);
+
+          }
+        }
+      }
+
+      .teams {
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+        &__name {
+          margin: 0;
+        }
+
+        &__goal {
+          font-weight: 200;
+          color: rgba(255, 255, 255, 0.7);
+          margin-right: 5px;
+          height: 17px;
+        }
+      }
+
+      .time {
+        font-size: 12px;
+        background-color: rgba(255, 255, 255, 0.17);
+
+        &.green {
+          background-color: rgba(103, 255, 94, 0.2);
+        }
+
+        &.red {
+          background-color: rgba(254, 228, 1, 0.17);
+        }
+
+        .green {
+          color: $neon-green;
+          font-weight: 600;
+          display: block;
+        }
+
+        .yellow {
+          color: $yellow-text;
+          font-weight: 600;
+          display: block;
+        }
+      }
+
+      .league {
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+      }
+
+      .state {
+        color: $yellow-text;
+        font-weight: 400;
+      }
+
+      .profit {
+        color: $neon-green;
+        font-weight: 600;
+      }
+
+      .loss {
+        color: $red-text;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__footer {
+    background-color: rgba(35, 34, 34, 0.7);
+
+    .title {
+      font-size: 9px;
+      display: block;
+      background-color: $black-text;
+      text-align: center;
+      padding: 5px 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__block {
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+
+    &__header {
+      font-size: 10px;
+      color: $white-text;
+      opacity: 0.7;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+    &__number {
+      font-size: $size-default;
+      margin: 0;
+
+      &.red {
+        color: $red-text;
+      }
+
+      &.yellow {
+        color: $yellow-text;
+      }
+
+      &.green,
+      .green {
+        color: $neon-green;
+      }
+
+      &.light-green {
+        color: $light-neon-green;
+      }
+    }
+
+    &__total {
+      font-size: $size-default;
+      margin: 0;
+    }
+  }
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+@include breakpoint(576px, "max") {
+  .bets {
+    &__table {
+      &__head {
+        th {
+          font-size: 10px;
+
+          &:first-child {
+            padding-left: initial;
+
+            .date {
+              img {
+                top: 7px;
+                left: 8px;
+              }
+            }
+          }
+
+          &:last-child {}
+        }
+      }
+
+      &__body {
+
+        tr {
+          td {
+            font-size: 12px;
+            &:first-of-type {
+              padding-left: 15px;
+            }
+          }
+        }
+        .time {
+          font-size: 8px;
+        }
+      }
+    }
+
+    &__footer {
+      background-color: rgba(35, 34, 34, 0.7);
+
+      .title {
+        font-size: 9px;
+        display: block;
+        background-color: $black-text;
+        text-align: center;
+        padding: 5px 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__block {
+      text-align: center;
+      font-family: "Titillium Web", sans-serif;
+
+      &__header {
+        font-size: 10px;
+        color: $white-text;
+        opacity: 0.7;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+
+      &__number {
+        font-size: $size-default;
+        margin: 0;
+
+        &.red {
+          color: $red-text;
+        }
+
+        &.yellow {
+          color: $yellow-text;
+        }
+
+        &.green,
+        .green {
+          color: $neon-green;
+        }
+
+        &.light-green {
+          color: $light-neon-green;
+        }
+      }
+
+      &__total {
+        font-size: $size-default;
+        margin: 0;
+      }
+    }
+  }
+}

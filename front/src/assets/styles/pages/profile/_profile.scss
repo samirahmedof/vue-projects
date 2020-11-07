@@ -1,0 +1,179 @@
+.profile-page {
+    color: $white-text;
+    margin-bottom: 60px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    border: 1px rgba(238, 238, 238, 0.5) solid;
+    border-radius: 10px;
+    padding: 24px 0;
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+
+    &__name {
+        padding-right: 15px;
+
+        p {
+            color: $white-text;
+            opacity: .7;
+            margin-bottom: 0 !important;
+            line-height: 28px;
+            font-weight: 300;
+            font-size: 11px;
+        }
+    }
+
+    &__state {
+        p {
+            color: $yellow-text;
+            margin-bottom: 0 !important;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+
+    & .text-green {
+        color: $neon-green;
+    }
+}
+
+.user-card {
+    color: $white-text;
+
+    &__title {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 9px;
+
+        & p {
+            margin: 5px 0;
+        }
+
+        a {
+            position: absolute;
+            right: -35px;
+            top: 0;
+        }
+    }
+
+    &__img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        max-height: 90px;
+
+        img {
+            max-width: 100%;
+
+        }
+
+        span {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            bottom: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            backdrop-filter: blur(2px);
+            border: $neon-blue 1px solid;
+            border-radius: 30px;
+            height: 43px;
+            width: 43px;
+
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__state {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 35px;
+
+        & p:first-child {
+            font-size: $size-default;
+            margin-bottom: 5px;
+        }
+
+        & p:last-child {
+            font-size: $size-large;
+            margin-bottom: 0;
+        }
+    }
+
+    &__edit {
+        margin-top: 15px;
+    }
+}
+
+@include breakpoint(576px, "max") {
+    .user-card {
+        &__title {
+            p {
+                font-size: 9px;
+                margin-bottom: 0;
+            }
+
+            a {
+                display: none;
+            }
+        }
+
+        &__img {
+            span {
+                height: 23px;
+                width: 23px;
+            }
+        }
+
+        &__state {
+            margin-top: 0px;
+
+            p {
+                &:first-child {
+                    font-size: 12px;
+                    margin: 0;
+                }
+
+                &:last-child {
+                    font-size: 16px;
+                }
+            }
+
+        }
+
+        &__edit {
+            button {
+                padding: 7px 5px;
+            }
+        }
+    }
+
+    .statistics {
+        border: none;
+
+        &__name {
+            padding-right: 5px;
+
+            p {
+                line-height: 18px;
+                font-size: 8px;
+            }
+        }
+
+        &__state {
+            p {
+                line-height: 18px;
+                font-size: 8px;
+            }
+        }
+    }
+
+}

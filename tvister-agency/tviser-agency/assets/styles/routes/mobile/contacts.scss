@@ -1,0 +1,30 @@
+#contacts {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  .contacts-title{
+    font-family: 'Nunito';
+    font-size: 0.6875rem;
+    line-height: 0.9375rem;
+    color: #686868;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+  .contacts-title{
+    display: none;
+  }
+  .contacts-wrapper{
+    display: flex;
+    flex-direction: column;
+    .form{
+      order: 1;
+    }
+    .contacts{
+      order: 2;
+    }
+  }
+}

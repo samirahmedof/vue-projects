@@ -1,0 +1,42 @@
+.form-switch {
+  &--outline {
+    .custom-control-label {
+      &:before,
+      &:after {
+        background: none!important;
+      }
+
+      &:before {
+        border: 0.5px solid #fff!important;
+      }
+
+      &:after {
+        border: 1px solid #fff!important;
+      }
+    }
+
+    .custom-control-input {
+
+      &:focus {
+        & ~ .custom-control-label {
+          &:before {
+            outline: none!important;
+            box-shadow: none!important;
+          }
+        }
+      }
+
+      &:checked {
+        & ~ .custom-control-label {
+          &:before {
+            border-color: #fff!important;
+          }
+
+          &:after {
+            background-color: #fff!important;
+          }
+        }
+      }
+    }
+  }
+}

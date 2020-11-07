@@ -1,0 +1,10 @@
+{
+	"routes": {
+		"index": "Home",
+		"about-us": "About us",
+		"portfolio": "Portfolio",
+		"contacts": "Contacts",
+		"services": "Services",
+		"partners": "Partners"
+	}
+}

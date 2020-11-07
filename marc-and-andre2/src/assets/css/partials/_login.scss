@@ -1,0 +1,82 @@
+.loginForm,
+.regForm,
+.forgotPassForm,
+.restoreForm {
+    padding: 25px 35px;
+    box-shadow: $shadow;
+    border: 1px solid $color;
+    width: 360px;
+    margin: 0 auto;
+    font-size: 14px;
+    .formHeading {
+        h6 {
+            text-align: center;
+            color: #c3a471;
+            margin-bottom: 32px;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+    .btns {
+        button {
+            width: 46%;
+        }
+    }
+    .forgot {
+        a {
+            color: $color;
+            transition: all 0.3s;
+            &:hover {
+                color: $light;
+            }
+        }
+    }
+    .incorrectEmail {
+        p {
+            color: $red;
+        }
+        button {
+            padding: 2px 10px;
+            margin: 0 10px;
+        }
+    }
+    .waitingAlert p {
+        color: $red;
+    }
+}
+.regForm {
+    width: 700px;
+    padding-top: 60px;
+    position: relative;
+    .backToLogin {
+        color: $color;
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 2px 5px;
+        border-radius: 4px;
+        transition: all 0.3s;
+        &:hover {
+            background: #efefef;
+        }
+    }
+    .addNew {
+        text-align: right;
+        margin-top: 15px;
+        .btn {
+            padding: 5px 15px;
+        }
+    }
+    .input-group .input-group-text {
+        background: $color;
+        color: white;
+        cursor: pointer;
+    }
+    select.gender {
+        width: 20%;
+    }
+}

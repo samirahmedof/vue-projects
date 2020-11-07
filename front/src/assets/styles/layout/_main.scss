@@ -1,0 +1,58 @@
+#app {
+  background-image: url("assets/img/bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  overflow-y: scroll;
+  font-family: 'Titillium Web', sans-serif;
+  &.dark-bg {
+    background-image: linear-gradient(-10deg, #000000 0%, #232222 100%);
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-pr {
+  color: $white-text !important;
+  width: 100% !important;
+  border: 1px solid !important;
+  padding: 10px 10px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s !important;
+  &:hover {
+    box-shadow: 0 0 6px rgba(247, 255, 0, 0.65) !important;
+    border: 1px solid $yellow-text !important;
+    color: $yellow-text !important;
+  }
+}
+.modal-backdrop {
+  background: #00000075 !important;
+  backdrop-filter: blur(15px);
+  opacity: 1 !important;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}

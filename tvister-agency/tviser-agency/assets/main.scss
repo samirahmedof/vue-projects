@@ -1,0 +1,37 @@
+@import "styles/normalize";
+@import "styles/fonts";
+@import "styles/scrollbar-fx";
+@import "styles/swiper";
+@import "styles/custom-slider";
+@import "styles/route-transitions";
+@import "styles/layout";
+@import "styles/components";
+@import "styles/menu";
+
+@media (min-width: 1200px) {
+  @import "styles/routes/desktop/index";
+  @import "styles/routes/desktop/about-us";
+  @import "styles/routes/desktop/contacts";
+  @import "styles/routes/desktop/partners";
+  @import "styles/routes/desktop/portfolio";
+  @import "styles/routes/desktop/services";
+}
+@media (min-width: 501px) and (max-width: 1199px) {
+  @import "styles/routes/tablet/index";
+  @import "styles/routes/tablet/about-us";
+  @import "styles/routes/tablet/contacts";
+  @import "styles/routes/tablet/partners";
+  @import "styles/routes/tablet/portfolio";
+  @import "styles/routes/tablet/services";
+}
+@media (max-width: 500px) {
+  @import "styles/routes/mobile/index";
+  @import "styles/routes/mobile/about-us";
+  @import "styles/routes/mobile/contacts";
+  @import "styles/routes/mobile/partners";
+  @import "styles/routes/mobile/portfolio";
+  @import "styles/routes/mobile/services";
+}
+
+
+

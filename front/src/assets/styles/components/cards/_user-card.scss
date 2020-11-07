@@ -1,0 +1,53 @@
+.user-card {
+  color: $white-text;
+  &__title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9px;
+    & p {
+      margin: 5px 0;
+    }
+    & img {
+      position: absolute;
+      right: 30px;
+      top: 0;
+    }
+  }
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-height: 90px;
+    margin-bottom: 32px;
+    &:before {
+      content: url('assets/img/avatar.svg');
+      object-fit: contain;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+      border: $neon-blue 1px solid;
+      border-radius: 30px;
+      height: 43px;
+      width: 43px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      bottom: 0;
+    }
+  }
+  &__state {
+    display: flex;
+    justify-content: space-evenly;
+    & p:first-child {
+      font-size: $size-default;
+      margin-bottom: 5px;
+    }
+    & p:last-child {
+      font-size: $size-large;
+      margin-bottom: 0;
+    }
+  }
+}

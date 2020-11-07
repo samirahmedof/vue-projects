@@ -1,0 +1,36 @@
+.ordersPage {
+    table {
+        thead {
+            th:first-of-type {
+                width: 50px;
+            }
+            th:last-of-type {
+                width: 120px;
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    text-align: center;
+                }
+                &.inProgress {
+                    cursor: pointer;
+                    td {
+                        &:last-of-type {
+                            background: $yellow;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#orderModal {
+    .buttons {
+        .btn {
+            width: 100%;
+            margin: 5px 0;
+        }
+    }
+}

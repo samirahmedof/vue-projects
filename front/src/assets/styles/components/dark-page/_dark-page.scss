@@ -1,0 +1,35 @@
+.dark-page {
+    &__head {
+        text-align: center;
+        position: relative;
+    }
+    &__icon {
+        img {
+            width: 22px;
+            height: 22px;
+        }
+    }
+    &__back {
+        position: absolute;
+        left: 0;
+        top: 0;
+        a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 10px;
+            }
+            span {
+                font-size: 16px;
+                font-weight: 300;
+                letter-spacing: 0.16px;
+            }
+            &:hover {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}

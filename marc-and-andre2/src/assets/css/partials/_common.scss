@@ -1,0 +1,50 @@
+$color: #c3a471;
+$light: #ead8b9;
+$bg: #fafafa;
+$black: #363636;
+$red: #b90000;
+$yellow: #deba19;
+$blue: #6eacb1;
+$shadow: 1px 1px 5px 0px #e0e0e0;
+
+main {
+    min-height: calc(100vh - 196px);
+    padding: 60px 0;
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.form-control.invalid {
+    border-color: $red;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color;
+}
+table {
+    th {
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle !important;
+    }
+    td {
+        font-size: 14px;
+        vertical-align: middle !important;
+    }
+}

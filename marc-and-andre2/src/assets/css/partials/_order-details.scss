@@ -1,0 +1,33 @@
+.orderDetailsPage {
+    .card-body {
+        th {
+            font-size: 13px;
+            padding: 5px;
+        }
+        tbody {
+            td {
+                padding: 5px;
+                &:nth-of-type(2) {
+                    cursor: pointer;
+                }
+                input {
+                    padding: 0;
+                    width: 30px;
+                    height: 25px;
+                    font-size: 10px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+        }
+        th.empty {
+            background: #c5c5c5;
+        }
+    }
+    .aboutTable {
+        h5 {
+            color: $color;
+            font-size: 18px;
+        }
+    }
+}

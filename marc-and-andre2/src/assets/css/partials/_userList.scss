@@ -1,0 +1,45 @@
+.userList {
+    table {
+        tr {
+            &.isNotActive {
+                background: $red;
+                color: white;
+                .btn {
+                    color: white;
+                    border-color: white;
+                }
+                i {
+                    color: white;
+                }
+            }
+            &.archive {
+                background: $yellow;
+                color: white;
+                .btn {
+                    color: white;
+                    border-color: white;
+                }
+                i {
+                    color: white;
+                }
+            }
+            &.active {
+                cursor: pointer;
+            }
+            &.disabledRow {
+                cursor: initial;
+            }
+            th {
+                padding: 7px;
+                font-size: 13px;
+            }
+        }
+        .userStatus {
+            width: max-content;
+            select {
+                font-size: 13px;
+                padding: 2px;
+            }
+        }
+    }
+}

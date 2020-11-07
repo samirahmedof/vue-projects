@@ -1,0 +1,23 @@
+.userProfile {
+    .about {
+        border: 1px solid $color;
+        box-shadow: $shadow;
+        padding: 25px;
+        table {
+            td {
+                border: none;
+                border-bottom: 1px solid #dac7a8;
+            }
+        }
+        &.disableProfile {
+            .form-control,
+            .input-group-text {
+                pointer-events: none;
+                background: #e4e6e7;
+            }
+        }
+        .form-control.gender {
+            width: 65px;
+        }
+    }
+}

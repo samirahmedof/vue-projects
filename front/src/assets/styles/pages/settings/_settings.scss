@@ -1,0 +1,390 @@
+.settings-page {
+    color: $white-text;
+
+    &__account {
+        position: relative;
+        .account-list {
+            text-align: center;
+            &__item {
+                a {
+                    color: $white-text;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding: 10px 20px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &__popups {
+        position: absolute;
+        left: 0;
+        top: -20px;
+        width: 100%;
+        min-height: calc(100% + 40px);
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+        border-radius: 21px;
+        background-color: #45454580;
+        backdrop-filter: blur(10px);
+        padding: 25px 25px;
+        margin-bottom: 60px;
+    }
+    &__popup-close {
+        text-align: right;
+    }
+    &__popup-heading {
+        text-align: center;
+        margin-bottom: 20px;
+        span {
+            opacity: 0.8;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+    &__popup-input {
+        background: transparent;
+        color: white;
+        border-radius: 10px;
+        padding: 10px 12px;
+        height: initial;
+        border: 1px solid white;
+        transition: all 0.3s;
+        width: 100%;
+        font-size: 14px;
+        &:focus {
+            box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
+            outline: none;
+        }
+    }
+    &__popup-button {
+        transition: all 0.3s;
+        color: white;
+        border: 1px solid white;
+        width: 100%;
+        border-radius: 10px;
+        padding: 13px 5px;
+        font-size: 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        &:focus {
+            outline: none;
+        }
+        &--disable {
+            color: #979797 !important;
+            border-color: #979797 !important;
+            background-color: transparent !important;
+            pointer-events: none;
+        }
+        &--green {
+            box-shadow: 0 0 6px rgba(8, 255, 0, 0.65);
+            border: 1px solid $neon-green;
+            background-color: #08ff0012;
+            backdrop-filter: blur(10px);
+        }
+        &--yellow {
+            border-color: $yellow-text;
+        }
+        &--red {
+            border-color: $red-text;
+            background-color: #fe00000d;
+            backdrop-filter: blur(10px);
+        }
+        &--transparent {
+            background: transparent;
+        }
+    }
+    .profile-settings {
+        &__photo-container {
+            img {
+                max-width: 90px;
+            }
+        }
+        &__edit {
+            transform: translateY(-15px);
+            a {
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background: white;
+                border-radius: 100%;
+            }
+        }
+        &__name {
+            label {
+                opacity: 0.75;
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+        &__input-box {
+            position: relative;
+            a {
+                display: inline-block;
+                position: absolute;
+                right: 10px;
+                top: 7px;
+            }
+        }
+    }
+    .email-password {
+        &__form {
+            label {
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+        &__input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $white-text;
+            font-size: 12px;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 15px;
+            color: $white-text;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .currency {
+        &__text {
+            margin-bottom: 15px;
+            p {
+                margin: 0;
+                opacity: 0.8;
+                font-size: 10px;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
+        &__buttons {
+            button {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .reset {
+        &__info {
+            ul {
+                padding-left: 20px;
+                li {
+                    color: $yellow-text;
+                    font-size: 12px;
+                    font-weight: 200;
+                    text-transform: uppercase;
+                    position: relative;
+                    span {
+                        font-weight: 600;
+                    }
+                    &::before {
+                        content: "";
+                        width: 9px;
+                        height: 9px;
+                        background: $yellow-text;
+                        position: absolute;
+                        border-radius: 100%;
+                        left: -20px;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+        &__heading {
+            font-size: 12px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        &__buttons {
+            .form-group {
+                margin-bottom: 10px;
+                button {
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &__footer {
+            text-align: center;
+            span {
+                font-size: 10px;
+                font-weight: 400;
+            }
+        }
+        &__large-btn {
+            padding: 13px 15px;
+            padding: 17px;
+            cursor: pointer;
+            .left-text {
+                display: flex;
+            }
+        }
+        &__reset-icon {
+            img {
+                width: 40px;
+            }
+        }
+        &__button-text {
+            padding: 0px 30px 0 10px;
+            h3 {
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            p {
+                opacity: 0.8;
+                font-size: 10px;
+                font-weight: 400;
+                margin-bottom: 0px;
+            }
+        }
+        &__price {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: right;
+        }
+        .pot-balance-reset {
+            &__text {
+                margin: 15px 0 20px;
+                p {
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            &__question {
+                h6 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                ul {
+                    text-align: center;
+                    li {
+                        margin: 0 10px;
+                        display: inline-block;
+                        a {
+                            display: inline-block;
+                            width: 57px;
+                            height: 57px;
+                            border: 1px solid;
+                            border-radius: 100%;
+                            text-align: center;
+                            line-height: 50px;
+                        }
+                    }
+                }
+                &--accept {
+                    border-color: $neon-green !important;
+                }
+                &--cancel {
+                    border-color: $red-text !important;
+                }
+            }
+            &__hide-col {
+                opacity: 0;
+            }
+        }
+        .reset-success {
+            &__container {
+                cursor: initial;
+                margin-top: 20px;
+            }
+            img {
+                width: 35px;
+            }
+            button {
+                width: 160px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .subscription-popup {
+        &__about {
+            text-align: center;
+
+            span {
+                color: $yellow-text;
+                font-size: 16px;
+                font-weight: 200;
+                text-transform: uppercase;
+                position: relative;
+                display: inline-block;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -15px;
+                    top: 8px;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 100%;
+                    background: $yellow-text;
+                }
+            }
+        }
+        &__content {
+            border-radius: 10px;
+            background-color: #00000075;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            margin: 15px 0 20px;
+            padding: 30px 10px;
+        }
+        &__heading {
+            margin-bottom: 25px;
+            h6 {
+                margin: 0;
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+        &__question {
+            p {
+                font-size: 16px;
+                font-weight: 200;
+            }
+            ul {
+                text-align: center;
+                li {
+                    margin: 0 10px;
+                    display: inline-block;
+                }
+            }
+        }
+        &__question-icon {
+            display: inline-block;
+            width: 57px;
+            height: 57px;
+            border: 1px solid;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 50px;
+            &--accept {
+                border-color: $neon-green;
+            }
+            &--cancel {
+                border-color: $red-text;
+            }
+        }
+        &__more {
+            text-align: center;
+            span {
+                font-size: 14px;
+                font-weight: 400;
+            }
+            img {
+                width: 23px;
+                height: 23px;
+                opacity: 0.71;
+                margin-right: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+#make-money {
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(24px);
+  top: 58px;
+  .modal-content {
+    background: none;
+    border: none;
+    color: $white-text;
+    font-family: 'Titillium Web', sans-serif;
+  }
+}
+
+.make-money {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__header {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 100;
+    font-size: $size-large;
+    margin-bottom: 55px;
+  }
+  &__title {
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__video {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    padding: 0 15px;
+  }
+}

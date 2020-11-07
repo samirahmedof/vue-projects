@@ -1,0 +1,25 @@
+.page-header {
+  width: 50%;
+  flex: 1 1 auto;
+  @media (max-width: 1700px) {
+    width: 55%;
+  }
+  @media (max-width: 1600px) {
+    width: 57.5%;
+  }
+  @media (max-width: 1500px) {
+    width: 60%;
+  }
+  @media (max-width: 1400px) {
+    width: 62.5%;
+  }
+  @media (max-width: 1300px) {
+    width: 65%;
+  }
+  @media (max-width: 1199px) {
+    width: 100%;
+  }
+  @media (max-width: 500px) {
+    display: none;
+  }
+}

@@ -1,0 +1,60 @@
+.header-wrapper {
+  position: relative;
+  z-index: 100;
+  .header{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    &-home{
+      font-family: 'Nunito';
+      font-size: 1rem;
+      line-height: 1.375rem;
+      color: #24200C;
+      margin-right: 32px;
+      text-transform: capitalize;
+    }
+    &-target{
+      cursor: none;
+      font-family: 'Nunito';
+      font-size: 1rem;
+      line-height: 1.375rem;
+      color: #B7B7B7;
+      margin-right: 32px;
+    }
+    &-arrow{
+      margin-right: 29px;
+    }
+  }
+  .header-modal{
+    text-align: center;
+    font-family: 'Nunito';
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+  }
+  .hamburger{
+    position: fixed;
+    top: 4.4444vh;
+    right: 2.5vw;
+    z-index: 101;
+  }
+  @media (max-width: 500px) {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 48px;
+    background-color: white;
+    box-shadow: 0px 1px 1px rgba(175, 175, 175, 0.25);
+    display: flex;
+    align-items: flex-end;
+    z-index: 3;
+    .header{
+      display: none;
+    }
+    .hamburger{
+      position: static;
+      margin: 14px 15px 14px auto;
+    }
+  }
+}
